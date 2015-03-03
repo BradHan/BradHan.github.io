@@ -10,21 +10,16 @@
 		<script src="http://cdn.amazeui.org/amazeui/2.2.1/js/amazeui.min.js"></script>
 	</head>
 	<body>
-		<header class="am-topbar am-topbar-inverse">
+		<header class="am-topbar">
 			<div class="am-g am-g-fixed">
 				<h1 class="am-topbar-brand">
-    				<a href="#">Yorman</a>
+    				<a href="/">Yorman</a>
  				 </h1>
 				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span>
 				</button>
 				<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
 					<ul class="am-nav am-nav-pills am-topbar-nav">
 						{% for post_category in site.data.categorys %}
-							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
 							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
 						{% endfor %}
 					</ul>
