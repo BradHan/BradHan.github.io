@@ -1,3 +1,2 @@
 baseurl: /blog
-categories: test
-tags: test
+relative_permalinks: true
