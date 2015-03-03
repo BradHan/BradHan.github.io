@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
 		<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</head>
-
 	<body>
 		<header role="banner" id="top" class="navbar navbar-static-top bs-docs-nav">
-			<div class="container">
-				<div class="navbar-header">
-					<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="../">Yorman</a>
-				</div>
-				<nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-				<ul>
+		  <div class="container">
+		    <div class="navbar-header">
+		     <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="../">Yorman</a>
+		    </div>
+		    <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+		      <ul class="nav navbar-nav">
+		      	<ul>
 					{% for post_category in site.data.categorys %}
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a>
-					</li>
+						<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
 					{% endfor %}
 				</ul>
-				</nav>
-			</div>
+		      </ul>
+		    </nav>
+		  </div>
 		</header>
-		{% if page.tags.size > 0 %} {% capture tags_content %}Posted with {% if page.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %} {% for post_tag in page.tags %} {% for data_tag in site.data.tags
-		%} {% if data_tag.slug == post_tag %} {% assign tag = data_tag %} {% endif %} {% endfor %} {% if tag %} {% capture tags_content_temp %}{{ tags_content }}<a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture
-		%} {% assign tags_content = tags_content_temp %} {% endif %} {% endfor %} {% else %} {% assign tags_content = '' %} {% endif %}
-
+		{% if page.tags.size > 0 %}
+		    {% capture tags_content %}Posted with {% if page.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+		    {% for post_tag in page.tags %}
+		        {% for data_tag in site.data.tags %}
+		            {% if data_tag.slug == post_tag %}
+		                {% assign tag = data_tag %}
+		            {% endif %}
+		        {% endfor %}
+		        {% if tag %}
+		            {% capture tags_content_temp %}{{ tags_content }}<a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+		            {% assign tags_content = tags_content_temp %}
+		        {% endif %}
+		    {% endfor %}
+		{% else %}
+		    {% assign tags_content = '' %}
+		{% endif %}
+		
 		<p id="post-meta">{{ tags_content }}</p>
-
+			
 		{{ content }}
 		<footer>
-
+			
 		</footer>
 	</body>
-
 </html>
