@@ -25,7 +25,7 @@
 		<p id="post-meta">{{ tags_content }}</p>
 		
 			<ul>
-			{% for post_category in site.categorys%}
+			{% for post_category in site.data.categorys%}
 				<li>{{ post_category.name }}</li>
 			{% endfor %}
 			</ul>
