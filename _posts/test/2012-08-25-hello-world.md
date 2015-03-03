@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: public
 title: 你好，世界
 category: programming
 tags: test
