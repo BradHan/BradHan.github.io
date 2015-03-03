@@ -4,35 +4,50 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<title>{{ page.title }}</title>
-		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.2.1/css/amazeui.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
-		<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.2.1/js/amazeui.min.js"></script>
 	</head>
 	<body>
-		<header role="banner" id="top" class="navbar navbar-static-top bs-docs-nav">
-		  <div class="container">
-		    <div class="navbar-header">
-		     <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="../">Yorman</a>
-		    </div>
-		    <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-		      <ul class="nav navbar-nav">
-				{% for post_category in site.data.categorys %}
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-					<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
-				{% endfor %}
-		      </ul>
-		    </nav>
-		  </div>
+		<header class="am-topbar am-topbar-inverse">
+			<div class="am-g am-g-fixed">
+				<h1 class="am-topbar-brand">
+    				<a href="#">Yorman</a>
+ 				 </h1>
+				<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span>
+				</button>
+				<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+					<ul class="am-nav am-nav-pills am-topbar-nav">
+						{% for post_category in site.data.categorys %}
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+							<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+						{% endfor %}
+					</ul>
+					<!--<div class="am-topbar-right">
+						<form class="am-form-inline am-topbar-form" role="form">
+							<div class="am-form-group">
+								<input type="email" class="am-form-field am-input-sm" placeholder="电子邮件">
+							</div>
+
+							<div class="am-form-group">
+								<input type="password" class="am-form-field am-input-sm" placeholder="密码">
+							</div>
+							<div class="am-form-group">
+							<ul class="am-avg-sm-2 am-avg-md-2 am-avg-lg-2 am-thumbnails">
+								 <li class="header-btn"><button type="submit" class="am-btn am-btn-primary am-btn-sm">登录</button></li>
+								 <li class="header-btn"><button class="am-btn am-btn-danger am-btn-sm">注册</button></li>
+							</ul>
+							</div>
+						</form>
+					</div>-->
+				</div>
+			</div>
+
 		</header>
 		{% if page.tags.size > 0 %}
 		    {% capture tags_content %}Posted with {% if page.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
