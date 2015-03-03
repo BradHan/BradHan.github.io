@@ -10,6 +10,7 @@ body > #wrap {
 	width: 100%;
 }
 #main {
+	padding-top: 80px;
 	padding-bottom: 150px;
 }  /* 必须使用和footer相同的高度 */
 .footer {
