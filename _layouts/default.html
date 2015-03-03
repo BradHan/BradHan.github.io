@@ -24,11 +24,13 @@
 		
 		<p id="post-meta">{{ tags_content }}</p>
 		
-		{% if site.tags.size > 0 %}
+		{% if site.categorys.size > 0 %}
 			<ul>
-			{% for post_category in site.tags%}
+			{% for post_category in site.categorys%}
 				<li>{{ post_category }}</li>
+			{% endfor %}
 			</ul>
+		{% if tag %}
 		{{ content }}
 	</body>
 </html>
