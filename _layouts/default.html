@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		</head>
 	<body>
+		<header>
+			<ul>
+			{% for post_category in site.data.categorys%}
+				<li>{{ post_category.name }}</li>
+			{% endfor %}
+			</ul>
+		</header>
 		{% if page.tags.size > 0 %}
 		    {% capture tags_content %}Posted with {% if page.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
 		    {% for post_tag in page.tags %}
@@ -23,12 +34,10 @@
 		{% endif %}
 		
 		<p id="post-meta">{{ tags_content }}</p>
-		
-			<ul>
-			{% for post_category in site.data.categorys%}
-				<li>{{ post_category.name }}</li>
-			{% endfor %}
-			</ul>
+			
 		{{ content }}
+		<footer>
+			
+		</footer>
 	</body>
 </html>
