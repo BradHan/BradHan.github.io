@@ -5,7 +5,6 @@
 		<title>{{ page.title }}</title>
 		</head>
 	<body>
-		<p id="post-meta">{{ tags_content }}</p>
 		{% if page.tags.size > 0 %}
 		    {% capture tags_content %}Posted with {% if page.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
 		    {% for post_tag in page.tags %}
@@ -22,6 +21,7 @@
 		{% else %}
 		    {% assign tags_content = '' %}
 		{% endif %}
+		<p id="post-meta">{{ tags_content }}</p>
 		{{ content }}
 	</body>
 </html>
