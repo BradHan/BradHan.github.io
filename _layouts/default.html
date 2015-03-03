@@ -24,9 +24,9 @@
 		
 		<p id="post-meta">{{ tags_content }}</p>
 		
-		{% if site.categorys.size > 0 %}
+		{% if site.tags.size > 0 %}
 			<ul>
-			{% for post_category in site.categorys%}
+			{% for post_category in site.tags%}
 				<li>{{ post_category }}</li>
 			</ul>
 		{{ content }}
