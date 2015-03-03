@@ -14,14 +14,21 @@
 		            {% endif %}
 		        {% endfor %}
 		        {% if tag %}
-		            {% capture tags_content_temp %}{{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+		            {% capture tags_content_temp %}{{ tags_content }}<a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
 		            {% assign tags_content = tags_content_temp %}
 		        {% endif %}
 		    {% endfor %}
 		{% else %}
 		    {% assign tags_content = '' %}
 		{% endif %}
+		
 		<p id="post-meta">{{ tags_content }}</p>
+		
+		{% if site.categorys.size > 0 %}
+			<ul>
+			{% for post_category in site.categorys%}
+				<li>{{ post_category }}</li>
+			</ul>
 		{{ content }}
 	</body>
 </html>
