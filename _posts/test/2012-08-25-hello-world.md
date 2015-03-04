@@ -4,9 +4,6 @@ title: 你好，世界
 category: programming
 tags: test
 ---
-##helloworld
+####helloworld
 耶耶耶耶
-<h2>{{ page.title }}</h2>
-
-<p>我的第一篇文章</p>
-<p>{{ page.date | date_to_string }}</p>
+####加啊加啊加啊加
