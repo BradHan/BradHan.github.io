@@ -12,9 +12,6 @@ title: Home
 			<li class="post-list-bd">
 				<time datetime='{{ post.date | date:"%Y-%m-%d" }}' class="am-link-muted">{{ post.date | date:"%Y-%m-%d" }}</time>
 				<a href="{{ post.url }}" title="{{ post.url }}">{{ post.title }}</a>
-				{% if site.truncate %}
-					<p>{{ post.content | strip_html | truncate: site.truncate }}</p>
-				{% endif%}
 			</li>
 	{% endfor %}
 </ul>
