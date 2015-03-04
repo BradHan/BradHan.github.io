@@ -40,9 +40,9 @@
 
 		</header>
 		<div id="wrap">
-			<div id="main" class="clearfix">
+			<section id="main" class="clearfix am-g am-g-fixed">
 				{{ content }}
-			</div>
+			</section>
 		</div>
 		<footer class="footer">
 			<div class="am-g am-g-fixed">
@@ -83,5 +83,19 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+			var prevTop = 0,
+			    currTop = 0;
+			$(window).scroll(function() {
+			    currTop = $(window).scrollTop();
+			    if (currTop < prevTop) { //判断小于则为向上滚动
+			       $('.am-topbar').removeClass('hide');
+			    } else {
+			      $('.am-topbar').addClass('hide');
+			    }
+			    prevTop = currTop; //IE下有BUG，所以用以下方式
+//			    setTimeout(function(){prevTop = currTop},0);
+			});
+		</script>
 	</body>
 </html>
