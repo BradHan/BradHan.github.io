@@ -1,14 +1,22 @@
 html, body, #wrap {
 	height: 100%;
+	font: 400 17px/1.62 "Georgia","Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 }
 body > #wrap {
 	height: auto; 
 	min-height: 100%;
 }
+.am-topbar,.post-list-bd > a{
+	transition: all 0.25s ease 0s;
+}
 .am-topbar{
 	position: fixed;
 	width: 100%;
-	transition: all 0.25s ease 0s;
+	box-shadow: 0 0 10px rgba(60, 60, 60, 0.22);
+}
+.am-topbar-form,.am-topbar-btn{
+	margin-bottom: 3px;
+	margin-top: 3px;
 }
 .hide{
 	opacity: 0;
@@ -19,10 +27,8 @@ body > #wrap {
 	padding-bottom: 150px;
 }  /* 必须使用和footer相同的高度 */
 .footer {
-	background-color: #666;
 	position: relative;
-	margin-top: -150px; /* footer高度的负值 */
-	height: 150px;
+	margin-top: -60px; /* footer高度的负值 */
 	clear:both;
 }
 .clearfix:after {
@@ -43,3 +49,19 @@ body > #wrap {
 	display: block;
 }
 /* End hide from IE-mac */
+
+.post-list{
+	list-style: none;
+}
+.am-topbar-brand > a,.post-list-bd > a,.post-list-hd,.am-topbar > a{
+	color: #222223;
+}
+.post-list-bd > a:hover,.am-topbar-brand > a:hover{
+	color: #56BC9A;
+}
+.post-list-bd{
+	padding-left: 92px;
+}
+.post-list-bd > a{
+	padding-left: 20px;
+}
