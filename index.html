@@ -1,14 +1,20 @@
 ---
 layout: common
-title: Yorman
+title: Home
 ---
-<article class="post">
-	
-</article>
-<h2>{{ post.tags }}</h2>
-<p>最新文章</p>
-<ul>
-　　{% for post in site.posts %}
-　　　　<li>{{ post.date | date:"%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
+<ul class="post-list">
+	{% for post in site.posts %}
+		{% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+		{% if year != y %}
+			{% assign year = y %}
+			<li class="post-list-hd am-text-lg">{{ year }}</li>
+		{% endfif %}
+			<li class="post-list-bd">
+				<time datetime="{{ post.date | date:"%Y-%m-%d" }}" class="am-link-muted">{{ post.date | date:"%Y-%m-%d" }}</time>
+				<a href="{{ post.url }}" title="{{ post.url }}">{{ post.title }}</a>
+				{% if site.truncate %}
+					<p>{{ post.content | strip_html | truncate: site.truncate }}</p>
+				{% endif%}
+			</li>
+	{% endfor %}
 </ul>
