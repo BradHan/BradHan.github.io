@@ -8,6 +8,7 @@ body > #wrap {
 .am-topbar{
 	position: fixed;
 	width: 100%;
+	transition: all 0.25s ease 0s;
 }
 .hide{
 	opacity: 0;
