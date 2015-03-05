@@ -5,6 +5,16 @@ layout: common
 	<h2 class="post-title">{{ page.title }}</h2>
 	{{ content }}
 </article>
-<div class="silde am-u-lg-2 am-show-lg-only">
-	ss
+<div class="am-u-lg-3 am-show-lg-only">
+	<nav data-am-sticky="" data-am-scrollspy-nav="{offsetTop: 45}" class="scrollspy-nav am-sticky">
+		<ul class="post-catalog">
+		</ul>
+	</nav>
 </div>
+<script>
+	$(document).ready(function(){
+		$('h4').each(function(){
+			$('.post-catalog').append('<li><a href="#'+$(this).attr('id')+'">+ '+$(this).html()+'</a></li>');
+		});
+	});
+</script>

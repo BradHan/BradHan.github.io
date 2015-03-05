@@ -9,13 +9,14 @@ body > #wrap {
 h2{
 	font-weight: 400;
 }
-.am-topbar,.post-list-bd > a{
+.am-topbar,.post-list-bd > a,.am-topbar-brand > a,.post-catalog > li > a{
 	transition: all 0.25s ease 0s;
 }
 .am-topbar{
 	position: fixed;
 	width: 100%;
 	box-shadow: 0 0 10px rgba(60, 60, 60, 0.22);
+	z-index: 1;
 }
 .am-topbar-form,.am-topbar-btn{
 	margin-bottom: 3px;
@@ -53,14 +54,14 @@ h2{
 }
 /* End hide from IE-mac */
 
-.post-list{
+.post-list,.post-catalog{
 	list-style: none;
 }
-.am-topbar-brand > a,.post-list-bd > a,.post-list-hd,.am-topbar > a{
+.am-topbar-brand > a,.post-list-bd > a,.post-list-hd,.am-topbar > a,.post-catalog > li > a{
 	color: #222223;
 }
-.post-list-bd > a:hover,.am-topbar-brand > a:hover{
-	color: #56BC9A;
+.post-list-bd > a:hover,.am-topbar-brand > a:hover,.post-catalog > li > a:hover{
+	color: #51ADED;
 }
 .post-list-bd{
 	padding-left: 92px;
@@ -71,9 +72,20 @@ h2{
 .post-title{
 	text-align: center;
 }
-.post > h4 {
-	border-left:solid 10px #56BC9A;
-	padding-left: 25px;
+.post-catalog > li{
+	margin-bottom: 10px;
+}
+.post > p,.post > h4{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.post > h4{
+	border-left:solid 5px #51ADED;
+	padding: 5px 18px;
+	background-color: #51ADED;
+	color: #fff;
+	display: inline;
+	font-weight: normal;
 }
 .post > p{
 	text-indent:2em; 
