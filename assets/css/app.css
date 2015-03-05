@@ -18,7 +18,7 @@ h2{
 	position: fixed;
 	width: 100%;
 	box-shadow: 0 0 10px rgba(60, 60, 60, 0.22);
-	z-index: 1;
+	z-index: 100;
 }
 .hide{
 	opacity: 0;
@@ -79,7 +79,7 @@ h2{
 }
 .post > h4{
 	border-left:solid 5px #4EA6EA;
-	padding: 5px 18px;
+	padding: 3px 15px;
 	background-color: #4EA6EA;
 	color: #fff;
 	display: inline;
