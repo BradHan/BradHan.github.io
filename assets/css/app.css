@@ -1,5 +1,7 @@
 html, body, #wrap {
 	height: 100%;
+}
+body{
 	font: 400 17px/1.62 "Georgia","Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 }
 body > #wrap {
@@ -17,10 +19,6 @@ h2{
 	width: 100%;
 	box-shadow: 0 0 10px rgba(60, 60, 60, 0.22);
 	z-index: 1;
-}
-.am-topbar-form,.am-topbar-btn{
-	margin-bottom: 3px;
-	margin-top: 3px;
 }
 .hide{
 	opacity: 0;
@@ -64,7 +62,7 @@ h2{
 	color: #4EA6EA;
 }
 .post-list-bd{
-	padding-left: 92px;
+	padding-left: 55px;
 }
 .post-list-bd > a{
 	padding-left: 20px;
