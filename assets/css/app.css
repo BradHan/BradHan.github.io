@@ -6,6 +6,9 @@ body > #wrap {
 	height: auto; 
 	min-height: 100%;
 }
+h2{
+	font-weight: 400;
+}
 .am-topbar,.post-list-bd > a{
 	transition: all 0.25s ease 0s;
 }
@@ -64,4 +67,14 @@ body > #wrap {
 }
 .post-list-bd > a{
 	padding-left: 20px;
+}
+.post-title{
+	text-align: center;
+}
+.post > h4 {
+	border-left:solid 10px #56BC9A;
+	padding-left: 25px;
+}
+.post > p{
+	text-indent:2em; 
 }
