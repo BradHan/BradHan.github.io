@@ -61,7 +61,7 @@ h2{
 	color: #222223;
 }
 .post-list-bd > a:hover,.am-topbar-brand > a:hover,.post-catalog > li > a:hover{
-	color: #51ADED;
+	color: #4EA6EA;
 }
 .post-list-bd{
 	padding-left: 92px;
@@ -80,9 +80,9 @@ h2{
 	margin-bottom: 1em;
 }
 .post > h4{
-	border-left:solid 5px #51ADED;
+	border-left:solid 5px #4EA6EA;
 	padding: 5px 18px;
-	background-color: #51ADED;
+	background-color: #4EA6EA;
 	color: #fff;
 	display: inline;
 	font-weight: normal;
