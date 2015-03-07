@@ -1,18 +1,21 @@
 ---
 layout: common
 ---
-<article class="post am-u-lg-9">
-	<h2 class="post-title">{{ page.title }}</h2>
-	{{ content }}
-</article>
-<div class="am-u-lg-3 am-show-lg-only">
-	<nav data-am-sticky="" data-am-scrollspy-nav="{offsetTop: 45}" class="scrollspy-nav am-sticky">
-		<ul class="post-catalog">
-		</ul>
-	</nav>
+<div class="am-container">
+	<article class="post am-u-lg-9">
+		<h2 class="post-title">{{ page.title }}</h2>
+		{{ content }}
+	</article>
+	<div class="am-u-lg-3 am-show-lg-only">
+		<nav data-am-sticky="" data-am-scrollspy-nav="{offsetTop: 45}" class="scrollspy-nav am-sticky">
+			<ul class="post-catalog">
+			</ul>
+		</nav>
+	</div>
 </div>
+
 <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ post.url }}"></div>
+	<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{ page.title }}" data-url="{{ post.url }}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
