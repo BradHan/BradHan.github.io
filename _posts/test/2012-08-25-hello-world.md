@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 你好，世界
-category: programming
+categorys: programming
 tags: test
 ---
 ####技术落后
