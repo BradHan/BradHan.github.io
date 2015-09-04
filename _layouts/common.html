@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<title>{{ page.title }}</title>
-		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.2.1/css/amazeui.min.css">
+		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
-		<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
-		<script src="http://cdn.amazeui.org/amazeui/2.2.1/js/amazeui.min.js"></script>
+		<script src="//cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<!--<script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.min.js"></script>-->
 	</head>
 	<body>
 		<header class="am-topbar am-topbar-fixed-top">
@@ -58,6 +58,7 @@
 			    currTop = $(window).scrollTop();
 			    if (currTop <= prevTop) { //判断小于则为向上滚动
 			       $('.am-topbar').removeClass('hide');
+//					document.querySelector('.am-topbar')
 			    } else {
 			      $('.am-topbar').addClass('hide');
 			    }
