@@ -7,8 +7,8 @@
 		</button>
 		<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
 			<ul class="am-nav am-nav-pills am-topbar-nav">
-				{% for post_category in site.data.categorys %}
-				<li><a href="/category/{{ post_category.slug }}">{{ post_category.name }}</a></li>
+				{% for tag in site.data.tags %}
+				<li><a href="/category/{{ tag.slug }}">{{ tag.name }}</a></li>
 				{% endfor %}
 			</ul>
 			<div class="am-topbar-right">
