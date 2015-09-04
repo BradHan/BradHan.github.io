@@ -1,0 +1,17 @@
+<script>
+	var prevTop = 0,
+			    currTop = 0;
+			$(window).scroll(function() {
+			    currTop = $(window).scrollTop();
+			    if (currTop <= prevTop) { //判断小于则为向上滚动
+			       $('.am-topbar').removeClass('hide');
+//					document.querySelector('.am-topbar')
+			    } else {
+			      $('.am-topbar').addClass('hide');
+			    }
+			    prevTop = currTop; //IE下有BUG，所以用以下方式
+//			    setTimeout(function(){prevTop = currTop},0);
+			});
+</script>
+
+</html>

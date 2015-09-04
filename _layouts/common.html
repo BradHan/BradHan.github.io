@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<title>{{ page.title }}</title>
-		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/app.css"/>
-		<script src="//cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
-		<script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.min.js"></script>
-	</head>
+	{% include head.html %}
 	<body>
 		{% include header.html %}
 		<div id="wrap">
@@ -16,27 +6,7 @@
 				{{ content }}
 			</section>
 		</div>
-		<footer class="footer">
-			<center class="am-g am-g-fixed">
-					<p class="amz-cp">© 2015 AllMobilize, Inc. Licensed under 
-						<a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
-					</p>
-			</center>
-		</footer>
-		<script>
-			var prevTop = 0,
-			    currTop = 0;
-			$(window).scroll(function() {
-			    currTop = $(window).scrollTop();
-			    if (currTop <= prevTop) { //判断小于则为向上滚动
-			       $('.am-topbar').removeClass('hide');
-//					document.querySelector('.am-topbar')
-			    } else {
-			      $('.am-topbar').addClass('hide');
-			    }
-			    prevTop = currTop; //IE下有BUG，所以用以下方式
-//			    setTimeout(function(){prevTop = currTop},0);
-			});
-		</script>
+		{% include footer.html %}
+
 	</body>
-</html>
+	{% include end.html %}
