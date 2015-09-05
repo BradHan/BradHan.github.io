@@ -34,7 +34,7 @@ var duoshuoQuery = {short_name:"yorman"};
 <!-- 多说公共JS代码 end -->
 <script>
 	$(document).ready(function(){
-		$('h2':not(.post-title)).each(function(){
+		$('h2:not(.post-title)').each(function(){
 			$('.post-catalog').append('<li><a href="#'+$(this).attr('id')+'">+ '+$(this).html()+'</a></li>');
 		});
 	});
