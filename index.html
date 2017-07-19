@@ -1,26 +1,19 @@
 <!doctype html>
-<html lang="en" ng-app="webApp">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>hello angular</title>
-    <link href="favicon.ico" rel="shortcut icon">
 
-    <script src="https://cdn.bootcss.com/angular.js/1.6.5/angular.min.js"></script>
-    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
-
-    <script src="module/app.js"></script>
-    <script src="module/common.js"></script>
-    <script src="module/index.js"></script>
-    <script src="module/request.js"></script>
-
+    <script src="https://cdn.bootcss.com/vue/2.4.1/vue.min.js"></script>
     <!--登入-->
-    <script src="module/sign/sign.js"></script>
 </head>
 
 <body>
-
-<div ui-view="indexView" ng-controller="indexCtrl"></div>
+    <div id="app">
+        {{ message }}
+    </div>
 
 </body>
-
+    <script src="module/app.js"></script>
 </html>
